@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public float moveSpeed;
     public float jumpForce;
@@ -18,15 +19,20 @@ public class PlayerController : MonoBehaviour {
     public float jumpTime;
     private float jumpTimecounter;
 
-	// Use this for initialization
-	void Start () {
+    public GUIText scoreText;
+    private int score;
+
+    // Use this for initialization
+    void Start()
+    {
         myRigidBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
         jumpTimecounter = jumpTime;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         //grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
@@ -38,7 +44,7 @@ public class PlayerController : MonoBehaviour {
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
             }
         }
-        if(Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
             if (jumpTimecounter > 0)
             {
@@ -47,7 +53,7 @@ public class PlayerController : MonoBehaviour {
             }
         }
 
-        if(Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
+        if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             jumpTimecounter = 0;
         }
@@ -55,5 +61,16 @@ public class PlayerController : MonoBehaviour {
         {
             jumpTimecounter = jumpTime;
         }
-	}
+    }
+
+    public void AddScore(int value)
+    {
+        score += value;
+        UpdateScore();
+    }
+
+    void UpdateScore()
+    {
+        scoreText.text = "Score: " + score.ToString();
+    }
 }
