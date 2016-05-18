@@ -4,10 +4,12 @@ using System.Collections;
 public class DestroyByContact : MonoBehaviour {
 
     private PlayerController playerController;
+    private ScoreManager scoreManager;
     public int scoreValue;
 
     void Start()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
         GameObject playerControllerObject = GameObject.FindWithTag("Player");
         if (playerControllerObject != null)
         {
@@ -21,7 +23,7 @@ public class DestroyByContact : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        playerController.AddScore(scoreValue);
+        scoreManager.AddScore(scoreValue);
         Destroy(gameObject);
     }
 }

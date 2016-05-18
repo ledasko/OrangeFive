@@ -7,6 +7,11 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     public float jumpForce;
 
+    // TODO These three will be used to increase speed at some point.
+    public float speedIncreaseMilestone;
+    private float speedMilestoneCount;
+    private float speedMilestoneCountStore;
+
     private Rigidbody2D myRigidBody;
 
     public bool grounded;
@@ -19,8 +24,7 @@ public class PlayerController : MonoBehaviour
     public float jumpTime;
     private float jumpTimecounter;
 
-    public GUIText scoreText;
-    private int score;
+    public GameManager gameManager;
 
     // Use this for initialization
     void Start()
@@ -63,14 +67,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void AddScore(int value)
+    // Used to determine when the player dies.
+    // Objest need to have tag 'killbox' added.
+    void OnCollisionEnter2D(Collision2D other)
     {
-        score += value;
-        UpdateScore();
-    }
-
-    void UpdateScore()
-    {
-        scoreText.text = "Score: " + score.ToString();
+        if(other.gameObject.tag == "killbox")
+        {
+            gameManager.RestartGame();
+        }
     }
 }
