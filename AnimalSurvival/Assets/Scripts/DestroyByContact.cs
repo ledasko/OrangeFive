@@ -6,6 +6,8 @@ public class DestroyByContact : MonoBehaviour {
     private PlayerController playerController;
     private ScoreManager scoreManager;
     public int scoreValue;
+    public float fruitValue;
+    public GameObject DestructionPoint;
 
     void Start()
     {
@@ -19,12 +21,24 @@ public class DestroyByContact : MonoBehaviour {
         {
             Debug.Log("error");
         }
+        DestructionPoint = GameObject.Find("DestructionPoint");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        PlayerHealth playerHealth=playerController.GetComponent<PlayerHealth>();
+        playerHealth.AddFruitValue(fruitValue);
         scoreManager.AddScore(scoreValue);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        
+    }
+
+    void Update()
+    {
+        if (transform.position.x < DestructionPoint.transform.position.x)
+        {
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
+        }
     }
 }

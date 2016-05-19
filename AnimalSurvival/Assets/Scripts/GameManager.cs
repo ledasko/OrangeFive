@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour {
     public PlayerController thePlayer;
     private Vector3 playerStartPoint;
 
+    public GroundGenerator groundGenerator;
+    private Vector3 groundGeneretorStartPosition;
+
     // Checks for destroyed platforms.
     private Destroyer[] platformList;
 
@@ -19,7 +22,7 @@ public class GameManager : MonoBehaviour {
         // TODO This we need.
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
-
+        groundGeneretorStartPosition = groundGenerator.transform.position;
         scoreManager = FindObjectOfType<ScoreManager>();
 	}
 	
@@ -48,6 +51,8 @@ public class GameManager : MonoBehaviour {
         {
             platformList[i].gameObject.SetActive(false);
         }
+        
+        groundGenerator.restart();
 
         thePlayer.transform.position = playerStartPoint;
         platformGenerator.position = platformStartPoint;
