@@ -5,10 +5,13 @@ public class PlayerController : MonoBehaviour
 {
 
     public float moveSpeed;
+    private float moveSpeedStore;
     public float jumpForce;
 
     // TODO These three will be used to increase speed at some point.
-    public float speedIncreaseMilestone;
+    public float speedMultiplier = 1.05f;
+    public float speedIncreaseMilestone = 100;
+    private float speedIncreaseMilestoneStore;
     private float speedMilestoneCount;
     private float speedMilestoneCountStore;
 
@@ -32,11 +35,27 @@ public class PlayerController : MonoBehaviour
         myRigidBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
         jumpTimecounter = jumpTime;
+        speedMilestoneCount = speedIncreaseMilestone;
+        speedMilestoneCountStore = speedMilestoneCount;
+        moveSpeedStore = moveSpeed;
+        speedIncreaseMilestoneStore = speedIncreaseMilestone;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.x > speedMilestoneCount)
+        {
+            speedMilestoneCount += speedIncreaseMilestone;
+            speedIncreaseMilestone *= speedMultiplier;
+            moveSpeed = moveSpeed * speedMultiplier;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            FindObjectOfType<DesertPauseMenu>().PauseGame();
+        }
+
         //grounded = Physics2D.IsTouchingLayers(myCollider, whatIsGround);
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
 
@@ -48,6 +67,7 @@ public class PlayerController : MonoBehaviour
                 myRigidBody.velocity = new Vector2(myRigidBody.velocity.x, jumpForce);
             }
         }
+
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
             if (jumpTimecounter > 0)
@@ -61,6 +81,7 @@ public class PlayerController : MonoBehaviour
         {
             jumpTimecounter = 0;
         }
+
         if (grounded)
         {
             jumpTimecounter = jumpTime;
@@ -68,12 +89,16 @@ public class PlayerController : MonoBehaviour
     }
 
     // Used to determine when the player dies.
-    // Objest need to have tag 'killbox' added.
+    // Objest need to have tag 'Killbox' added.
     void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.tag == "killbox")
+        Debug.Log("Entered OCE2D.");
+        if(other.gameObject.tag == "Killbox")
         {
-            gameManager.RestartGame();
+            FindObjectOfType<GameManager>().RestartGame();
+        } else
+        {
+            Debug.Log("Item does not have tag 'Killbox'.");
         }
     }
 }

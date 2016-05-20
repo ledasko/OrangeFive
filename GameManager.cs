@@ -9,19 +9,24 @@ public class GameManager : MonoBehaviour {
     public PlayerController thePlayer;
     private Vector3 playerStartPoint;
 
+    public GroundGenerator groundGenerator;
+    private Vector3 groundGeneretorStartPosition;
+
     // Checks for destroyed platforms.
-    private Destroyer[] platformList;
+    private Destroyer[] destructionList;
+    private DestroyByContact[] destroyByContactList;
 
     private ScoreManager scoreManager;
+    public DesertDeathMenu deathMenu;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         // TODO This we need.
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
-
+        groundGeneretorStartPosition = groundGenerator.transform.position;
         scoreManager = FindObjectOfType<ScoreManager>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,27 +35,36 @@ public class GameManager : MonoBehaviour {
 
     public void RestartGame()
     {
-        StartCoroutine("RestartGameCoroutine");
-    }
-
-    public IEnumerator RestartGameCoroutine()
-    {
-        // TODO This is where you reset position and all that jazz.
+        scoreManager.scoreIncrease = false;
         thePlayer.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(0.5f);
+        deathMenu.gameObject.SetActive(true);
+    }
 
-        scoreManager.scoreIncrease = false;
+    public void Reset()
+    {
+        deathMenu.gameObject.SetActive(false);
 
-        // Used to remove all created objects on death.
-        platformList = FindObjectsOfType<Destroyer>();
-        for(int i = 0; i < platformList.Length; i++)
+        destructionList = FindObjectsOfType<Destroyer>();
+        for (int i = 0; i < destructionList.Length; i++)
         {
-            platformList[i].gameObject.SetActive(false);
+            destructionList[i].gameObject.SetActive(false);
         }
+
+        destroyByContactList = FindObjectsOfType<DestroyByContact>();
+        foreach (DestroyByContact o in destroyByContactList)
+        {
+            o.gameObject.SetActive(false);
+        }
+
+
+        groundGenerator.restart();
 
         thePlayer.transform.position = playerStartPoint;
         platformGenerator.position = platformStartPoint;
+
+        // TODO Health reset.
+        FindObjectOfType<PlayerHealth>().ResetHealth();
 
         thePlayer.gameObject.SetActive(true);
         scoreManager.scoreCount = 0;
