@@ -7,7 +7,7 @@ public class PlayerHealth : MonoBehaviour {
     private HealthBar healthBar;
     private PlayerController playerController;
     private float currentHealth;
-    private bool isDead=false;
+    private bool isDead = false;
     public float maxValue;
 
 	void Start () {
@@ -24,8 +24,10 @@ public class PlayerHealth : MonoBehaviour {
         if (isDead)
         {
             Debug.Log("Nigga you dead");
+            FindObjectOfType<GameManager>().RestartGame();
         }
-        if (playerController.transform.position.y<=-8.840001)
+
+        if (playerController.transform.position.y <= -8.840001)
         {
             AddFruitValue(-0.25f);
         }
@@ -33,7 +35,7 @@ public class PlayerHealth : MonoBehaviour {
 
     public void AddFruitValue(float fruitValue)
     {
-        if(!isDead && (currentHealth+fruitValue)<=maxValue)
+        if(!isDead && (currentHealth + fruitValue) <= maxValue)
         {
             currentHealth += fruitValue;
             if (currentHealth <= 0)
@@ -43,5 +45,10 @@ public class PlayerHealth : MonoBehaviour {
             }
             healthBar.CurValue = currentHealth;
         }
+    }
+
+    // TODO Resets health values upon death.
+    public void ResetHealth()
+    {
     }
 }

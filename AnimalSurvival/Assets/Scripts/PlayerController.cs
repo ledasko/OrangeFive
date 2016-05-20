@@ -92,9 +92,13 @@ public class PlayerController : MonoBehaviour
     // Objest need to have tag 'Killbox' added.
     void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("Entered OCE2D.");
         if(other.gameObject.tag == "Killbox")
         {
             FindObjectOfType<GameManager>().RestartGame();
+        } else
+        {
+            Debug.Log("Item does not have tag 'Killbox'.");
         }
     }
 }

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     private DestroyByContact[] destroyByContactList;
 
     private ScoreManager scoreManager;
-    private DesertDeathMenu deathMenu;
+    public DesertDeathMenu deathMenu;
 
     // Use this for initialization
     void Start () {
@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour {
         playerStartPoint = thePlayer.transform.position;
         groundGeneretorStartPosition = groundGenerator.transform.position;
         scoreManager = FindObjectOfType<ScoreManager>();
-        deathMenu = FindObjectOfType<DesertDeathMenu>();
     }
 	
 	// Update is called once per frame
@@ -44,6 +43,8 @@ public class GameManager : MonoBehaviour {
 
     public void Reset()
     {
+        deathMenu.gameObject.SetActive(false);
+
         destructionList = FindObjectsOfType<Destroyer>();
         for (int i = 0; i < destructionList.Length; i++)
         {
@@ -61,6 +62,9 @@ public class GameManager : MonoBehaviour {
 
         thePlayer.transform.position = playerStartPoint;
         platformGenerator.position = platformStartPoint;
+
+        // TODO Health reset.
+        FindObjectOfType<PlayerHealth>().ResetHealth();
 
         thePlayer.gameObject.SetActive(true);
         scoreManager.scoreCount = 0;

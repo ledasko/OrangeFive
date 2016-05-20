@@ -21,7 +21,6 @@ public class HealthBar : MonoBehaviour {
             if (c.name == "Content")
             {
                 content = c as Image;
-                
             }
         }
     }
