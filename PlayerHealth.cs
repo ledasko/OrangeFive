@@ -7,10 +7,12 @@ public class PlayerHealth : MonoBehaviour {
     private HealthBar healthBar;
     private PlayerController playerController;
     private float currentHealth;
-    private bool isDead = false;
+    public bool isDead = false;
     public float maxValue;
+    private AudioSource deathAudio;
 
 	void Start () {
+        deathAudio = GameObject.Find("DeathSound").GetComponent<AudioSource>();
         currentHealth = maxValue;
         Component[] components = GetComponentsInChildren<Image>();
         healthBar = GameObject.FindGameObjectWithTag("Health bar").GetComponent<HealthBar>();
@@ -24,6 +26,7 @@ public class PlayerHealth : MonoBehaviour {
         if (isDead)
         {
             Debug.Log("Nigga you dead");
+            deathAudio.Play();
             FindObjectOfType<GameManager>().RestartGame();
         }
 
@@ -38,17 +41,20 @@ public class PlayerHealth : MonoBehaviour {
         if(!isDead && (currentHealth + fruitValue) <= maxValue)
         {
             currentHealth += fruitValue;
+            healthBar.CurValue = currentHealth;
             if (currentHealth <= 0)
             {
                 isDead = true;
+                //deathAudio.Play();
                 return;
             }
-            healthBar.CurValue = currentHealth;
+           
         }
     }
 
     // TODO Resets health values upon death.
     public void ResetHealth()
     {
+        currentHealth = maxValue;
     }
 }

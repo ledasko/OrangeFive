@@ -45,7 +45,7 @@ public class DesertPauseMenu : MonoBehaviour {
         Time.timeScale = 0f;
     }
 
-    // Show pause menu.
+    // Show/hide pause menu.
     private void MenuShow(bool b)
     {
         pauseMenu.SetActive(b);

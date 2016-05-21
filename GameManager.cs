@@ -12,19 +12,21 @@ public class GameManager : MonoBehaviour {
     public GroundGenerator groundGenerator;
     private Vector3 groundGeneretorStartPosition;
 
-    // Checks for destroyed platforms.
+    // Platforms with 'Destroy' script.
     private Destroyer[] destructionList;
+    // Platforms with 'DestroyOnContact' script.
     private DestroyByContact[] destroyByContactList;
 
     private ScoreManager scoreManager;
     public DesertDeathMenu deathMenu;
 
+
     // Use this for initialization
     void Start () {
-        // TODO This we need.
         platformStartPoint = platformGenerator.position;
         playerStartPoint = thePlayer.transform.position;
         groundGeneretorStartPosition = groundGenerator.transform.position;
+
         scoreManager = FindObjectOfType<ScoreManager>();
     }
 	
@@ -37,8 +39,8 @@ public class GameManager : MonoBehaviour {
     {
         scoreManager.scoreIncrease = false;
         thePlayer.gameObject.SetActive(false);
-
         deathMenu.gameObject.SetActive(true);
+
     }
 
     public void Reset()
@@ -57,17 +59,17 @@ public class GameManager : MonoBehaviour {
             o.gameObject.SetActive(false);
         }
 
-
         groundGenerator.restart();
 
         thePlayer.transform.position = playerStartPoint;
         platformGenerator.position = platformStartPoint;
 
-        // TODO Health reset.
-        FindObjectOfType<PlayerHealth>().ResetHealth();
-
         thePlayer.gameObject.SetActive(true);
         scoreManager.scoreCount = 0;
         scoreManager.scoreIncrease = true;
+       
+        PlayerHealth thePlayerHealth = FindObjectOfType<PlayerHealth>();
+        thePlayerHealth.isDead = false;
+        thePlayerHealth.ResetHealth();
     }
 }

@@ -15,4 +15,10 @@ public class DesertDeathMenu : MonoBehaviour {
     {
         SceneManager.LoadScene(mainMenu);
     }
+
+    // Sets time scaling to 1.
+    private void StartTime()
+    {
+        Time.timeScale = 1f;
+    }
 }

@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private float moveSpeedStore;
     public float jumpForce;
+  
+  
 
     // TODO These three will be used to increase speed at some point.
     public float speedMultiplier = 1.05f;
@@ -51,6 +53,13 @@ public class PlayerController : MonoBehaviour
             moveSpeed = moveSpeed * speedMultiplier;
         }
 
+        // Start game sequence.
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            FindObjectOfType<DesertStartMenu>().StartGame();
+        }
+
+        // Pause game sequence.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             FindObjectOfType<DesertPauseMenu>().PauseGame();
@@ -86,19 +95,28 @@ public class PlayerController : MonoBehaviour
         {
             jumpTimecounter = jumpTime;
         }
+
+      
+        
     }
 
     // Used to determine when the player dies.
     // Objest need to have tag 'Killbox' added.
     void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Entered OCE2D.");
+        //Debug.Log("Entered OCE2D.");
         if(other.gameObject.tag == "Killbox")
         {
             FindObjectOfType<GameManager>().RestartGame();
         } else
         {
-            Debug.Log("Item does not have tag 'Killbox'.");
+            //Debug.Log("Item does not have tag 'Killbox'.");
         }
+    }
+
+    // Stops time.
+    private void StopTime()
+    {
+        Time.timeScale = 0f;
     }
 }
