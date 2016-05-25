@@ -3,7 +3,6 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class DesertPauseMenu : MonoBehaviour {
-    public string currentLevel;
     public string mainMenu;
 
     public GameObject pauseMenu;
@@ -45,7 +44,7 @@ public class DesertPauseMenu : MonoBehaviour {
         Time.timeScale = 0f;
     }
 
-    // Show/hide pause menu.
+    // Show pause menu.
     private void MenuShow(bool b)
     {
         pauseMenu.SetActive(b);

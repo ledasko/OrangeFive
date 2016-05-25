@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public float moveSpeed;
-    private float moveSpeedStore;
+    public float moveSpeedStore;
     public float jumpForce;
   
   
@@ -31,16 +31,26 @@ public class PlayerController : MonoBehaviour
 
     public GameManager gameManager;
 
+    private Animator myAnimator;
+
     // Use this for initialization
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody2D>();
         myCollider = GetComponent<Collider2D>();
         jumpTimecounter = jumpTime;
+        if (PlayerPrefs.HasKey("speedMultiplier")) {
+            speedMultiplier = PlayerPrefs.GetFloat("speedMultiplier");
+        }
+        if (PlayerPrefs.HasKey("moveSpeed"))
+        {
+            moveSpeed = PlayerPrefs.GetFloat("moveSpeed");
+        }
         speedMilestoneCount = speedIncreaseMilestone;
         speedMilestoneCountStore = speedMilestoneCount;
         moveSpeedStore = moveSpeed;
         speedIncreaseMilestoneStore = speedIncreaseMilestone;
+        myAnimator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -50,16 +60,9 @@ public class PlayerController : MonoBehaviour
         {
             speedMilestoneCount += speedIncreaseMilestone;
             speedIncreaseMilestone *= speedMultiplier;
-            moveSpeed = moveSpeed * speedMultiplier;
+            moveSpeed *= speedMultiplier;
         }
 
-        // Start game sequence.
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            FindObjectOfType<DesertStartMenu>().StartGame();
-        }
-
-        // Pause game sequence.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             FindObjectOfType<DesertPauseMenu>().PauseGame();
@@ -96,8 +99,8 @@ public class PlayerController : MonoBehaviour
             jumpTimecounter = jumpTime;
         }
 
-      
-        
+        myAnimator.SetBool("Grounded", grounded);
+        myAnimator.SetFloat("Speed", moveSpeed);
     }
 
     // Used to determine when the player dies.
@@ -114,9 +117,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Stops time.
-    private void StopTime()
+    public void reset()
     {
-        Time.timeScale = 0f;
+        speedIncreaseMilestone = speedIncreaseMilestoneStore;
+        speedMilestoneCount = speedMilestoneCountStore;
+        moveSpeed = moveSpeedStore;
     }
 }

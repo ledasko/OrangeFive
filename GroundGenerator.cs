@@ -29,7 +29,7 @@ public class GroundGenerator : MonoBehaviour
     void Update()
     {
 
-        if (camera.transform.position.x - previousX >= groundWidth/2 - cameraOffset)
+        if (camera.transform.position.x - previousX > groundWidth/2 - cameraOffset)
         {
             previousX += groundWidth;
             transform.position = new Vector3(previousX, ground.transform.position.y, ground.transform.position.z);
@@ -38,7 +38,7 @@ public class GroundGenerator : MonoBehaviour
             newPlatform.transform.position = transform.position;
             newPlatform.transform.rotation = transform.rotation;
             newPlatform.transform.localScale = ground.transform.localScale;
-            newPlatform.SetActive(true);
+            newPlatform.SetActiveRecursively(true);
             theBadStuffGenerator.SpawnBadStuff(transform.position, groundWidth);
 
         }

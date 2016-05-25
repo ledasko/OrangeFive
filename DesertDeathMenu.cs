@@ -3,12 +3,12 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class DesertDeathMenu : MonoBehaviour {
-    public string currentLevel;
     public string mainMenu;
 
     public void RestartGame()
     {
         FindObjectOfType<GameManager>().Reset();
+        StartTime();
     }
 
     public void QuitGame()

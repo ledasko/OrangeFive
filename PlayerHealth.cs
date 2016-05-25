@@ -9,7 +9,9 @@ public class PlayerHealth : MonoBehaviour {
     private float currentHealth;
     public bool isDead = false;
     public float maxValue;
+    public float healthDegen;
     private AudioSource deathAudio;
+    private float groundLevel;
 
 	void Start () {
         deathAudio = GameObject.Find("DeathSound").GetComponent<AudioSource>();
@@ -25,15 +27,9 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
         if (isDead)
         {
-            Debug.Log("Nigga you dead");
             deathAudio.Play();
             FindObjectOfType<GameManager>().RestartGame();
-        }
-
-        if (playerController.transform.position.y <= -8.840001)
-        {
-            AddFruitValue(-0.25f);
-        }
+        }       
 	}
 
     public void AddFruitValue(float fruitValue)
@@ -45,7 +41,7 @@ public class PlayerHealth : MonoBehaviour {
             if (currentHealth <= 0)
             {
                 isDead = true;
-                //deathAudio.Play();
+                deathAudio.Play();
                 return;
             }
            
@@ -56,5 +52,9 @@ public class PlayerHealth : MonoBehaviour {
     public void ResetHealth()
     {
         currentHealth = maxValue;
+        Component[] components = GetComponentsInChildren<Image>();
+        healthBar = GameObject.FindGameObjectWithTag("Health bar").GetComponent<HealthBar>();
+        healthBar.MaxValue = maxValue;
+        healthBar.Init();
     }
 }

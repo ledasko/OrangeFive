@@ -36,7 +36,7 @@ public class PlatformGenerator : MonoBehaviour {
         for (int i = 0; i < theObjectPools.Length; i++) {
             platformWidths[i] = theObjectPools[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
         }
-        minHeight = transform.position.y;
+        minHeight = transform.position.y+0.3f;
         maxHeight = maxHeightPoint.position.y;
         theFruitGenerator = FindObjectOfType<FruitGenerator>();
     }
