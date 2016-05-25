@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: fe6b36bfbe9eff145bd3ee5e711e6525
+timeCreated: 1464112779
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Jezic1
+    21300002: Jezic3
+    21300004: Jezic0
+    21300006: Jezic2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Jezic1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 323
+        width: 233
+        height: 148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -97.5, y: 148}
+        - {x: -116.5, y: 129}
+        - {x: -116.5, y: 14}
+        - {x: -97.5, y: 0}
+        - {x: 74.5, y: 0}
+        - {x: 116.5, y: 46}
+        - {x: 116.5, y: 116}
+        - {x: 76.5, y: 148}
+      - - {x: 62.5, y: 12}
+        - {x: 62.5, y: 6}
+        - {x: 80.5, y: 6}
+        - {x: 83.5, y: 7}
+        - {x: 83.5, y: 12}
+        - {x: 81.5, y: 16}
+        - {x: 64.5, y: 16}
+      - - {x: 99.5, y: 28}
+        - {x: 96.5, y: 27}
+        - {x: 89.5, y: 13}
+        - {x: 89.5, y: 9}
+        - {x: 97.5, y: 9}
+        - {x: 104.5, y: 16}
+        - {x: 104.5, y: 24}
+        - {x: 101.5, y: 28}
+      - - {x: 75.5, y: 18}
+        - {x: 77.5, y: 15}
+        - {x: 81.5, y: 16}
+        - {x: 83.5, y: 18}
+        - {x: 83.5, y: 20}
+        - {x: 80.5, y: 21}
+      - - {x: 85.5, y: 18}
+        - {x: 88.5, y: 19}
+        - {x: 88.5, y: 22}
+        - {x: 85.5, y: 23}
+        - {x: 83.5, y: 21}
+      - - {x: 108.5, y: 94}
+        - {x: 111.5, y: 96}
+        - {x: 109.5, y: 101}
+        - {x: 106.5, y: 101}
+        - {x: 105.5, y: 98}
+      - - {x: 90.5, y: 107}
+        - {x: 90.5, y: 104}
+        - {x: 91.5, y: 101}
+        - {x: 94.5, y: 101}
+        - {x: 97.5, y: 102}
+        - {x: 97.5, y: 105}
+        - {x: 94.5, y: 108}
+        - {x: 92.5, y: 108}
+      - - {x: 109.5, y: 103}
+        - {x: 112.5, y: 104}
+        - {x: 112.5, y: 107}
+        - {x: 109.5, y: 108}
+        - {x: 107.5, y: 106}
+      - - {x: 83.5, y: 108}
+        - {x: 85.5, y: 106}
+        - {x: 88.5, y: 107}
+        - {x: 88.5, y: 110}
+        - {x: 86.5, y: 112}
+        - {x: 83.5, y: 111}
+      - - {x: 84.5, y: 127}
+        - {x: 88.5, y: 123}
+        - {x: 91.5, y: 124}
+        - {x: 91.5, y: 126}
+        - {x: 87.5, y: 130}
+        - {x: 85.5, y: 130}
+    - name: Jezic3
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 330
+        width: 235
+        height: 147
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 40.5, y: 147}
+        - {x: -72.5, y: 147}
+        - {x: -117.5, y: 115}
+        - {x: -117.5, y: 0}
+        - {x: 110.5, y: 0}
+        - {x: 117.5, y: 31}
+        - {x: 117.5, y: 83}
+        - {x: 97.5, y: 134}
+      - - {x: 98.5, y: 27}
+        - {x: 95.5, y: 26}
+        - {x: 88.5, y: 12}
+        - {x: 88.5, y: 8}
+        - {x: 96.5, y: 8}
+        - {x: 103.5, y: 15}
+        - {x: 103.5, y: 23}
+        - {x: 100.5, y: 27}
+      - - {x: 107.5, y: 93}
+        - {x: 110.5, y: 95}
+        - {x: 108.5, y: 100}
+        - {x: 105.5, y: 100}
+        - {x: 104.5, y: 97}
+      - - {x: 89.5, y: 106}
+        - {x: 89.5, y: 103}
+        - {x: 90.5, y: 100}
+        - {x: 93.5, y: 100}
+        - {x: 96.5, y: 101}
+        - {x: 96.5, y: 104}
+        - {x: 93.5, y: 107}
+        - {x: 91.5, y: 107}
+      - - {x: 108.5, y: 102}
+        - {x: 111.5, y: 103}
+        - {x: 111.5, y: 106}
+        - {x: 108.5, y: 107}
+        - {x: 106.5, y: 105}
+      - - {x: 82.5, y: 107}
+        - {x: 84.5, y: 105}
+        - {x: 87.5, y: 106}
+        - {x: 87.5, y: 109}
+        - {x: 85.5, y: 111}
+        - {x: 82.5, y: 110}
+      - - {x: 83.5, y: 126}
+        - {x: 87.5, y: 122}
+        - {x: 90.5, y: 123}
+        - {x: 90.5, y: 125}
+        - {x: 86.5, y: 129}
+        - {x: 84.5, y: 129}
+    - name: Jezic0
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 101
+        width: 232
+        height: 149
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 116, y: 112}
+        - {x: 103, y: 145}
+        - {x: 69, y: 149}
+        - {x: -95, y: 149}
+        - {x: -116, y: 114}
+        - {x: -116, y: 28}
+        - {x: -63, y: 0}
+        - {x: 58, y: 0}
+        - {x: 65, y: 1}
+        - {x: 106, y: 35}
+        - {x: 116, y: 61}
+      - - {x: 63, y: 12}
+        - {x: 63, y: 6}
+        - {x: 81, y: 6}
+        - {x: 84, y: 7}
+        - {x: 84, y: 12}
+        - {x: 82, y: 16}
+        - {x: 65, y: 16}
+      - - {x: 100, y: 28}
+        - {x: 97, y: 27}
+        - {x: 90, y: 13}
+        - {x: 90, y: 9}
+        - {x: 98, y: 9}
+        - {x: 105, y: 16}
+        - {x: 105, y: 24}
+        - {x: 102, y: 28}
+      - - {x: 76, y: 18}
+        - {x: 78, y: 15}
+        - {x: 82, y: 16}
+        - {x: 84, y: 18}
+        - {x: 84, y: 20}
+        - {x: 81, y: 21}
+      - - {x: 86, y: 18}
+        - {x: 89, y: 19}
+        - {x: 89, y: 22}
+        - {x: 86, y: 23}
+        - {x: 84, y: 21}
+      - - {x: 109, y: 94}
+        - {x: 112, y: 96}
+        - {x: 110, y: 101}
+        - {x: 107, y: 101}
+        - {x: 106, y: 98}
+      - - {x: 91, y: 107}
+        - {x: 91, y: 104}
+        - {x: 92, y: 101}
+        - {x: 95, y: 101}
+        - {x: 98, y: 102}
+        - {x: 98, y: 105}
+        - {x: 95, y: 108}
+        - {x: 93, y: 108}
+      - - {x: 110, y: 103}
+        - {x: 113, y: 104}
+        - {x: 113, y: 107}
+        - {x: 110, y: 108}
+        - {x: 108, y: 106}
+      - - {x: 84, y: 108}
+        - {x: 86, y: 106}
+        - {x: 89, y: 107}
+        - {x: 89, y: 110}
+        - {x: 87, y: 112}
+        - {x: 84, y: 111}
+      - - {x: 85, y: 127}
+        - {x: 89, y: 123}
+        - {x: 92, y: 124}
+        - {x: 92, y: 126}
+        - {x: 88, y: 130}
+        - {x: 86, y: 130}
+    - name: Jezic2
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 109
+        width: 234
+        height: 148
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 66, y: 148}
+        - {x: -70, y: 148}
+        - {x: -117, y: 129}
+        - {x: -117, y: 32}
+        - {x: -73, y: 0}
+        - {x: 85, y: 0}
+        - {x: 117, y: 59}
+        - {x: 117, y: 100}
+        - {x: 101, y: 124}
+      - - {x: 100, y: 28}
+        - {x: 97, y: 27}
+        - {x: 90, y: 13}
+        - {x: 90, y: 9}
+        - {x: 98, y: 9}
+        - {x: 105, y: 16}
+        - {x: 105, y: 24}
+        - {x: 102, y: 28}
+      - - {x: 86, y: 18}
+        - {x: 89, y: 19}
+        - {x: 89, y: 22}
+        - {x: 86, y: 23}
+        - {x: 84, y: 21}
+      - - {x: -117, y: 84}
+        - {x: -114, y: 85}
+        - {x: -114, y: 90}
+        - {x: -116, y: 92}
+        - {x: -117, y: 92}
+      - - {x: 109, y: 94}
+        - {x: 112, y: 96}
+        - {x: 110, y: 101}
+        - {x: 107, y: 101}
+        - {x: 106, y: 98}
+      - - {x: 91, y: 107}
+        - {x: 91, y: 104}
+        - {x: 92, y: 101}
+        - {x: 95, y: 101}
+        - {x: 98, y: 102}
+        - {x: 98, y: 105}
+        - {x: 95, y: 108}
+        - {x: 93, y: 108}
+      - - {x: 110, y: 103}
+        - {x: 113, y: 104}
+        - {x: 113, y: 107}
+        - {x: 110, y: 108}
+        - {x: 108, y: 106}
+      - - {x: 84, y: 108}
+        - {x: 86, y: 106}
+        - {x: 89, y: 107}
+        - {x: 89, y: 110}
+        - {x: 87, y: 112}
+        - {x: 84, y: 111}
+      - - {x: 85, y: 127}
+        - {x: 89, y: 123}
+        - {x: 92, y: 124}
+        - {x: 92, y: 126}
+        - {x: 88, y: 130}
+        - {x: 86, y: 130}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

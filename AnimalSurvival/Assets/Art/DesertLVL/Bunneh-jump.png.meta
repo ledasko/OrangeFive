@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: e11da51ec4ecad84d99e732f240a4198
+timeCreated: 1464103722
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Bunneh-jump_0
+    21300002: Bunneh-jump_1
+    21300004: Bunneh-jump_2
+    21300006: Bunneh-jump_3
+    21300008: Bunneh-jump_4
+    21300010: Bunneh-jump_5
+    21300012: Bunneh-jump_6
+    21300014: Bunneh-jump_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Bunneh-jump_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 207
+        width: 250
+        height: 257
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -52, y: 3}
+        - {x: -52, y: 1}
+        - {x: -51, y: 0}
+        - {x: -45, y: 0}
+        - {x: -43, y: 2}
+        - {x: -44, y: 5}
+        - {x: -50, y: 5}
+      - - {x: -30, y: 5}
+        - {x: -34, y: 5}
+        - {x: -35, y: 3}
+        - {x: -35, y: 0}
+        - {x: -29, y: 0}
+        - {x: -28, y: 1}
+        - {x: -28, y: 4}
+      - - {x: -18, y: 23}
+        - {x: -16, y: 25}
+        - {x: -5, y: 28}
+        - {x: -5, y: 23}
+        - {x: 20, y: 12}
+        - {x: 31, y: 17}
+        - {x: 46, y: 33}
+        - {x: 43, y: 46}
+        - {x: 125, y: 116}
+        - {x: 125, y: 215}
+        - {x: 124, y: 223}
+        - {x: 58, y: 250}
+        - {x: -6, y: 250}
+        - {x: -33, y: 238}
+        - {x: -30, y: 235}
+        - {x: -26, y: 232}
+        - {x: -20, y: 232}
+        - {x: -22, y: 232}
+        - {x: -57, y: 225}
+        - {x: -125, y: 102}
+        - {x: -125, y: 13}
+        - {x: -99, y: 5}
+        - {x: -22, y: 5}
+        - {x: -9, y: 18}
+        - {x: -10, y: 23}
+        - {x: -13, y: 26}
+        - {x: -14, y: 26}
+      - - {x: 50, y: 28}
+        - {x: 50, y: 21}
+        - {x: 55, y: 21}
+        - {x: 57, y: 22}
+        - {x: 57, y: 26}
+        - {x: 56, y: 28}
+      - - {x: 61, y: 64}
+        - {x: 64, y: 65}
+        - {x: 64, y: 68}
+        - {x: 61, y: 69}
+        - {x: 59, y: 67}
+      - - {x: 74, y: 88}
+        - {x: 77, y: 89}
+        - {x: 77, y: 92}
+        - {x: 74, y: 93}
+        - {x: 72, y: 91}
+      - - {x: 85, y: 230}
+        - {x: 88, y: 231}
+        - {x: 88, y: 234}
+        - {x: 85, y: 235}
+        - {x: 83, y: 233}
+      - - {x: 8, y: 257}
+        - {x: 3, y: 253}
+        - {x: 2, y: 248}
+        - {x: 4, y: 246}
+        - {x: 7, y: 247}
+        - {x: 17, y: 255}
+        - {x: 17, y: 257}
+      - - {x: -5, y: 255}
+        - {x: -5, y: 257}
+        - {x: -10, y: 257}
+        - {x: -8, y: 254}
+    - name: Bunneh-jump_1
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 459
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Bunneh-jump_2
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 207
+        width: 255
+        height: 249
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 125.5, y: 216}
+        - {x: 68.5, y: 242}
+        - {x: -9.5, y: 242}
+        - {x: -30.5, y: 230}
+        - {x: -27.5, y: 227}
+        - {x: -23.5, y: 224}
+        - {x: -17.5, y: 224}
+        - {x: -19.5, y: 224}
+        - {x: -37.5, y: 213}
+        - {x: -124.5, y: 80}
+        - {x: -124.5, y: 21}
+        - {x: -74.5, y: 0}
+        - {x: 30.5, y: 0}
+        - {x: 57.5, y: 23}
+        - {x: 127.5, y: 125}
+        - {x: 127.5, y: 194}
+      - - {x: -0.5, y: 15}
+        - {x: -2.5, y: 13}
+        - {x: -2.5, y: 10}
+        - {x: -0.5, y: 8}
+        - {x: 1.5, y: 8}
+        - {x: 4.5, y: 9}
+        - {x: 4.5, y: 13}
+        - {x: 3.5, y: 15}
+      - - {x: 52.5, y: 20}
+        - {x: 52.5, y: 13}
+        - {x: 57.5, y: 13}
+        - {x: 59.5, y: 14}
+        - {x: 59.5, y: 18}
+        - {x: 58.5, y: 20}
+      - - {x: -127.5, y: 44}
+        - {x: -124.5, y: 45}
+        - {x: -124.5, y: 48}
+        - {x: -126.5, y: 50}
+        - {x: -127.5, y: 50}
+      - - {x: 63.5, y: 56}
+        - {x: 66.5, y: 57}
+        - {x: 66.5, y: 60}
+        - {x: 63.5, y: 61}
+        - {x: 61.5, y: 59}
+      - - {x: 76.5, y: 80}
+        - {x: 79.5, y: 81}
+        - {x: 79.5, y: 84}
+        - {x: 76.5, y: 85}
+        - {x: 74.5, y: 83}
+      - - {x: -127.5, y: 108}
+        - {x: -127.5, y: 102}
+        - {x: -113.5, y: 96}
+        - {x: -110.5, y: 97}
+        - {x: -110.5, y: 99}
+        - {x: -117.5, y: 108}
+      - - {x: 87.5, y: 222}
+        - {x: 90.5, y: 223}
+        - {x: 90.5, y: 226}
+        - {x: 87.5, y: 227}
+        - {x: 85.5, y: 225}
+      - - {x: 8.5, y: 249}
+        - {x: 5.5, y: 244}
+        - {x: 4.5, y: 240}
+        - {x: 6.5, y: 238}
+        - {x: 9.5, y: 239}
+        - {x: 19.5, y: 247}
+        - {x: 19.5, y: 249}
+      - - {x: -2.5, y: 247}
+        - {x: -2.5, y: 249}
+        - {x: -7.5, y: 249}
+        - {x: -5.5, y: 246}
+    - name: Bunneh-jump_3
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 451
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Bunneh-jump_4
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 343
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Bunneh-jump_5
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 335
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Bunneh-jump_6
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 307
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: Bunneh-jump_7
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 245
+        width: 31
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,134 @@
+fileFormatVersion: 2
+guid: 0f0e42f9a71a17145a717a8225bb0a89
+timeCreated: 1464118507
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Shrooms_0
+    21300002: Shrooms_1
+    21300004: Shrooms_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 70
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Shrooms_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 118
+        width: 117
+        height: 139
+      alignment: 9
+      pivot: {x: 0.45785496, y: 0.3190796}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 23.43097, y: 13.647934}
+        - {x: 19.43097, y: 7.647934}
+        - {x: 19.43097, y: -6.352066}
+        - {x: 17.43097, y: 8.647934}
+        - {x: 19.43097, y: 38.647934}
+        - {x: 51.43097, y: 35.647934}
+        - {x: 63.43097, y: 38.647934}
+        - {x: 63.43097, y: 62.647934}
+        - {x: 51.43097, y: 94.647934}
+        - {x: -45.56903, y: 94.647934}
+        - {x: -53.56903, y: 91.647934}
+        - {x: -53.56903, y: 30.647934}
+        - {x: -26.56903, y: -44.352066}
+        - {x: 41.43097, y: -44.352066}
+        - {x: 63.43097, y: -27.352066}
+        - {x: 63.43097, y: 8.647934}
+        - {x: 41.43097, y: 20.647934}
+      - - {x: 19.43097, y: -15.352066}
+        - {x: 22.43097, y: -14.352066}
+        - {x: 22.43097, y: -11.352066}
+        - {x: 19.43097, y: -10.352066}
+        - {x: 17.43097, y: -12.352066}
+    - name: Shrooms_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 0
+        width: 97
+        height: 112
+      alignment: 9
+      pivot: {x: 0.49491647, y: 0.2666596}
+      border: {x: 0, y: 0, z: 0, w: 5}
+      outline:
+      - - {x: -48.006897, y: 80.134125}
+        - {x: -48.006897, y: 46.134125}
+        - {x: -39.006897, y: 39.134125}
+        - {x: -18.006897, y: 29.134127}
+        - {x: -14.006897, y: -14.865873}
+        - {x: -9.006897, y: -25.865873}
+        - {x: -7.006897, y: -29.865873}
+        - {x: 32.993103, y: -29.865873}
+        - {x: 48.993103, y: 18.134127}
+        - {x: 48.993103, y: 69.134125}
+        - {x: 33.993103, y: 80.134125}
+    - name: Shrooms_2
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 104
+        width: 123
+        height: 137
+      alignment: 9
+      pivot: {x: 0.4679285, y: 0.28764445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -45.555206, y: 97.59271}
+        - {x: -57.555206, y: 92.59271}
+        - {x: -57.555206, y: 39.592712}
+        - {x: -31.555206, y: -39.407288}
+        - {x: 48.444794, y: -39.407288}
+        - {x: 65.44479, y: 5.5927124}
+        - {x: 65.44479, y: 85.59271}
+        - {x: 37.444794, y: 97.59271}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
